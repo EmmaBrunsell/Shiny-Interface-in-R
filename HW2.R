@@ -1,7 +1,12 @@
+library(shiny)
+library(tidyverse)
+library(DT)
+library(readr)
+
 # Read in CSV data about school enrollment
 # This data is taken from https://www.census.gov/data/tables/time-series/demo/school-enrollment/cps-historical-time-series.html, 
 # it includes historical enrollment data for schools.  
- enrollment <- read_csv("https://raw.githubusercontent.com/EmmaBrunsell/Wisconsin-School-District-Data/refs/heads/main/School_Enrollment.csv")
+enrollment <- read_csv("https://raw.githubusercontent.com/EmmaBrunsell/Wisconsin-School-District-Data/refs/heads/main/School_Enrollment.csv")
 
 ######################################### Clean Data ######################################### 
 
@@ -95,7 +100,7 @@ percentage_plot <- function(df, selected_year = NULL) {
 
 # User Interface
 ui <- fluidPage(
-  titlePanel("School Enrollment in Chicago"),
+  titlePanel("School Enrollment Trends in the United States"),
   
   tags$h4("CPS Historical Enrollment Data from the United States Census", 
           style = "color: gray; margin-top: -10px;"),
